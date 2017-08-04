@@ -1,0 +1,22 @@
+mixin standart-head(pageTitle)
+    meta(charset='utf-8')
+    title= pageTitle
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel="shortcut icon" href="/favicon.ico")
+    link(rel="apple-touch-icon" href="/apple-touch-icon.png")
+
+    block head
+    //meta(name='description' content=pageDescription)
+    //meta(name='keywords' content=pageKeywords)
+    //meta(name='copyright' content=pageCopyright)
+
+    block links
+
+
+    //build:css styles/main.css
+    link(rel="stylesheet" media="all" href="styles/main.css")
+    //endbuild
+
+    //build:css styles/vendor.css
+    link(rel="stylesheet" media="all" href="../../node_modules/normalize.css/normalize.css")
+    //endbuild

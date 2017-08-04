@@ -1,0 +1,23 @@
+include ../partials/standard-head
+
+doctype html
+head
+    +standart-head()
+
+body
+
+    include ../partials/javascript.html
+    include ../partials/browsehappy.html
+    include ../partials/warning.html
+    main.main-content
+        block content
+
+
+    //build:js scripts/vendor.js
+    script(src="../../node_modules/jquery/dist/jquery.min.js")
+    //endbuild
+
+    //build:js scripts/main.js
+    script(src='scripts/main.js')
+    //endbuild
+
