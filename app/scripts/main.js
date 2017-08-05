@@ -1,5 +1,16 @@
 'use strict';
 
+$(function() {
+    var menuContent = function() {
+        $('.menu_redesign > nav > ol > li').mouseover(function() {
+            $(this).parent().children().removeClass('active');
+            $(this).addClass('active');
+        });
+    };
+
+    menuContent();
+});
+
 $(function () {
 
     function behaviorSlide(el){
@@ -62,3 +73,5 @@ $(function () {
         return false;
     });
 });
+
+
