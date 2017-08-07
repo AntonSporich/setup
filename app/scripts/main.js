@@ -64,6 +64,11 @@ $(function() {
         return false;
     });
 
+    $('.services_list li').on('click', function() {
+        $('.services_list li').removeClass('show');
+        $(this).addClass('show');
+    });
+
 
     // function behaviorSlide(el){
     //     var that = el,

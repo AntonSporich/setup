@@ -86,9 +86,9 @@ gulp.task('webserver', ['render'], function() {
     gulp.src('./dist/debug')
         .pipe(webserver({
             livereload: true,
-            port: 3000,
+            port: 3001,
             directoryListing: './dist/debug',
-            open: 'http://localhost:3000/index.html'
+            open: 'http://localhost:3001/index.html'
         }));
 });
 
