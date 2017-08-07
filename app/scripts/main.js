@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 $(function() {
     var menuContent = function() {
         $('.menu_redesign > nav > ol > li').mouseover(function() {
@@ -14,13 +12,6 @@ $(function() {
 
     /* for responsive menu */
 
-    function SetMenuVisibility() {
-        if ($(window).width() <= 1200) {
-            $('.menu-nav').addClass('menu-responsive');
-        } else {
-            $('.menu-nav').removeClass('menu-responsive');
-        }
-    }
 
     SetMenuVisibility();
 
@@ -29,6 +20,14 @@ $(function() {
         $('body').toggleClass('page-noscroll');
         return false;
     });
+
+    function SetMenuVisibility() {
+        if ($(window).width() <= 1200) {
+            $('.menu-nav').addClass('menu-responsive');
+        } else {
+            $('.menu-nav').removeClass('menu-responsive');
+        }
+    }
 
     var HEIGHT_THIS = 52;
 
@@ -62,10 +61,6 @@ $(function() {
         return false;
     });
 
-
-});
-
-$(function () {
 
     function behaviorSlide(el){
         var that = el,
@@ -126,6 +121,16 @@ $(function () {
 
         return false;
     });
+
+    $window.resize(function() {
+        var $windowWidth = $window.width();
+        if ($windowWidth > 1200) {
+            $('#top_menu').removeAttr('style');
+        }
+
+        SetMenuVisibility();
+    });
+
 });
 
 
