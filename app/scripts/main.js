@@ -129,10 +129,16 @@ $(function() {
     //     return false;
     // });
 
+    var areasSlider =  $('.areas-slider.bxslider');
+
     $window.resize(function() {
         var $windowWidth = $window.width();
         if ($windowWidth > 1200) {
             $('#top_menu').removeAttr('style');
+        } else if ($windowWidth > 768) {
+            areasSlider.destroySlider();
+        } else {
+            areasSlider.bxSlider();
         }
 
         SetMenuVisibility();
