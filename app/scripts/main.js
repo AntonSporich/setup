@@ -1,5 +1,7 @@
 'use strict';
 
+var $window = $(window);
+
 $(function() {
 
     //Desktop header navigation
@@ -91,7 +93,7 @@ $(function() {
     //     $('html, body').animate({ scrollTop: topScrollMargin}, 'normal')
     // }
 
-    var $window = $(window);
+
     // var $servicesList = $('.services_list li'),
     //     $servicesSection = $('.services_list li section');
     //
@@ -129,21 +131,40 @@ $(function() {
     //     return false;
     // });
 
-    var areasSlider =  $('.areas-slider.bxslider');
+
 
     $window.resize(function() {
         var $windowWidth = $window.width();
         if ($windowWidth > 1200) {
             $('#top_menu').removeAttr('style');
-        } else if ($windowWidth > 768) {
-            areasSlider.destroySlider();
-        } else {
-            areasSlider.bxSlider();
         }
 
         SetMenuVisibility();
     });
 
+});
+
+//Slider logic appearence
+$(function () {
+    var _$windowWidth = $window.width();
+    var areasSlider =  $('.areas-slider.bxslider');
+
+    if (_$windowWidth <= 768) {
+        areasSlider.bxSlider();
+    }
+
+    $window.resize(function() {
+        var $windowWidth = $window.width();
+        if ($windowWidth > 769) {
+            try {
+                areasSlider.destroySlider();
+            } catch(e) {
+                console.log(`You are recizing the window`)
+            }
+        } else {
+            areasSlider.bxSlider();
+        }
+    });
 });
 
 
