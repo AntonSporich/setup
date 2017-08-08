@@ -209,9 +209,77 @@
         }
     }
 
-    //.bx-viewport {
-    //    height: 100% !important;
-    //}
+}
+
+.enterprice-block {
+    height: 65.4rem;
+    background: url('../resources/images/enterprice-retail.png');
+    padding-top: 6.1rem;
+    padding-bottom: 6rem;
+    background-color: #e8ebf5;
+    background-size: cover;
+
+    h2 {
+        font-size: 4.54rem;
+        padding-bottom: 4.2rem;
+    }
+
+    p {
+        line-height: 2.55rem;
+        width: 67rem;
+    }
+
+    ul {
+        font-weight: 600;
+        display: inline-block;
+        padding-top: 5.6rem;
+        padding-right: 4.3rem;
+
+        li {
+            font-weight: 500;
+            padding-top: .6rem;
+
+            &:before {
+                content: '';
+                background: url("../resources/images/right-angle.png") no-repeat;
+                display: inline-block;
+                width: 1rem;
+                height: 1.4rem;
+                position: relative;
+                top: .23rem;
+                margin-right: .5rem;
+            }
+
+            &:first-child {
+                padding-top: 2.8rem;
+                line-height: 2.55rem;
+            }
+        }
+    }
+
+    .explore-link {
+        display: block;
+        padding-top: 6.5rem;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        &:after {
+            content: '';
+            background: url("../resources/images/right-angle.png") no-repeat;
+            background-size: cover;
+            display: inline-block;
+            width: 1rem;
+            height: 1.6rem;
+            position: relative;
+            top: .23rem;
+            margin-left: .7rem;
+        }
+
+        a {
+            color: #000;
+        }
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -239,6 +307,11 @@
 @media only screen and (max-width: 1200px) {
 
     .services-block {
+
+        .container {
+            padding-left: 0;
+        }
+
         padding-top: 5rem;
 
         h2 {
@@ -318,7 +391,7 @@
     .core-areas {
         padding-top: 5rem;
         padding-bottom: 1rem;
-        padding-left: 2rem;
+        //padding-left: 2rem;
 
 
         h2 {
@@ -341,5 +414,59 @@
             padding-top: 1rem;
         }
 
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .enterprice-block {
+        background-position: -114rem;
+        padding-right: 2rem;
+
+        h2 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            background-color: rgba(35, 57, 104, 0.83);
+            color: #fff;
+            padding: 4.3rem 2.3rem;
+            height: 18.8rem;
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+            top: 33rem;
+        }
+
+        p, ul {
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+            position: absolute;
+            left: -1000rem;
+            opacity: 0;
+            z-index: -1000;
+        }
+
+        .explore-link {
+            position: relative;
+            top: 21rem;
+            text-transform: none;
+            text-align: center;
+
+            &:after {
+                width: 1.7rem;
+                height: 2.7rem;
+                background-image: url(../resources/images/sprite_global.svg);
+                background-position: -79px -42px;
+                background-size: 43rem;
+                transform: rotate(-90deg);
+                top: .9rem;
+                margin: 0;
+            }
+
+            a {
+                color: #fff;
+            }
+        }
     }
 }
