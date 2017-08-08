@@ -2,6 +2,10 @@
     background: url('../resources/images/greeting-section-bg.png');
     height: 62rem;
 
+    .container {
+        padding-left: 0;
+    }
+
     .main-description {
         width: 50.5rem;
         height: 31.9rem;
@@ -11,6 +15,10 @@
         top: 18rem;
         padding-top: 8.2rem;
         padding-left: 4.5rem;
+    }
+
+    h3 {
+        padding-bottom: 2.7rem;
     }
 
 
@@ -26,6 +34,10 @@
 .services-block {
     padding-top: 8rem;
 
+    .container {
+        padding-left: 3.4rem;
+    }
+
     h2 {
         font-size: 4.54rem;
         font-weight: 300;
@@ -36,7 +48,6 @@
 
     .services_list {
         min-height: 418px;
-        padding-left: 3rem;
         background: url('../resources/images/service-icons.png') no-repeat;
         background-position-y: .5rem;
         background-position-x: 100%;
@@ -90,73 +101,118 @@
                 transition: max-height 3s ease 0s;
             }
         }
+    }
+}
+
+.core-areas {
+    background-color: #52a7e8;
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+
+    h2 {
+        font-size: 4.54rem;
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        padding-bottom: 5rem;
+    }
+
+    .slide-item {
+        width: 38.8rem;
+        height: 45rem;
+        display: inline-block;
+        vertical-align: top;
+        background-color: #fff;
+        margin-right: 3rem;
+        margin-bottom: 2.6rem;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+
+    .slide-item-top {
+        width: 100%;
+        height: 20rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+
+        &.marketplaces {
+            background: url('../resources/images/marketplaces.png');
+            background-size: cover;
+        }
+
+        &.booking {
+            background: url('../resources/images/booking.png');
+            background-size: cover;
+        }
+
+        &.eprocurement {
+            background: url('../resources/images/eprocurement.png');
+            background-size: cover;
+        }
+
+        &.billing {
+            background: url('../resources/images/billing.png');
+            background-size: cover;
+        }
+
+        &.fundraising {
+            background: url('../resources/images/fundraising.png');
+            background-size: cover;
+        }
+
+        &.customer-service {
+            background: url('../resources/images/customer-service.png');
+            background-size: cover;
+        }
+    }
+
+    .heading-container {
+        height: 11rem;
+        display: flex;
+        align-items: center;
 
     }
 
-    //.services_list {
-    //
-    //    li header {
-    //        position: relative;
-    //        background: #8d9db5;
-    //
-    //        &:after {
-    //            content: '^';
-    //            display: inline-block;
-    //            position: absolute;
-    //            top: 50%;
-    //            color: red;
-    //            margin-top: -3px;
-    //            right: 20px;
-    //            width: 11px;
-    //            height: 6px;
-    //            //background: url(../images/accord_arrows.svg) no-repeat 0 0;
-    //            transition: transform .3s ease-in;
-    //            -webkit-transition: transform .3s ease-in;
-    //            -moz-transition: transform .3s ease-in;
-    //            -o-transition: transform .3s ease-in;
-    //        }
-    //
-    //        a {
-    //            color: green;
-    //            text-transform: uppercase;
-    //            text-decoration: none;
-    //            outline: none;
-    //
-    //
-    //        }
-    //    }
-    //
-    //    li section {
-    //        display: none;
-    //        background: #f1f5fb;
-    //        overflow: hidden;
-    //        padding: 42px 30px;
-    //    }
-    //
-    //    li.current {
-    //
-    //        header:after {
-    //            content: '^';
-    //            display: inline-block;
-    //            position: absolute;
-    //            top: 50%;
-    //            color: green;
-    //            margin-top: -3px;
-    //            right: 25px;
-    //            width: 11px;
-    //            height: 6px;
-    //            transform: rotate(180deg);
-    //            transition: transform .3s ease-in;
-    //            -webkit-transition: transform .3s ease-in;
-    //            -moz-transition: transform .3s ease-in;
-    //            -o-transition: transform .3s ease-in;
-    //        }
-    //    }
+    h3 {
+        font-weight: 700;
+        font-size: 2.27rem;
+        text-transform: uppercase;
+        color: #fff;
+        width: 28rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.42rem;
+        font-weight: 400;
+        line-height: 2.55rem;
+        padding: 2.8rem 2.2rem;
+        text-align: center;
+    }
+
+    .bx-wrapper {
+        border: none !important;
+        box-shadow: none !important;
+        background: none !important;
+    }
+
+    .bx-default-pager a {
+        border: 2px solid #fff;
+        background: transparent !important;
+
+        &.active {
+            background: #fff !important;
+        }
+    }
+
+    //.bx-viewport {
+    //    height: 100% !important;
     //}
-
-
 }
-
 
 @media only screen and (max-width: 500px) {
 
@@ -170,6 +226,7 @@
         h3 {
             font-weight: 700 !important;
             font-size: 3rem;
+            padding-bottom: 2.4rem !important;
         }
 
         p {
@@ -228,7 +285,7 @@
 
             .heading a {
                 text-transform: uppercase;
-                font-weight: 500 !important;
+                font-weight: 600 !important;
                 font-size: 1.4rem !important;
                 color: #000 !important;
             }
@@ -250,7 +307,39 @@
                 padding-top: 0 !important;
                 padding-left: 2rem !important;
                 padding-bottom: 2.9rem;
+                margin: 0 !important;
             }
         }
+    }
+}
+
+
+@media only screen and (max-width: 1269px)  {
+    .core-areas {
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+
+
+        h2 {
+            font-size: 3rem;
+            font-weight: 600;
+            padding-bottom: 3rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            width: 23rem;
+        }
+
+        .slide-item {
+            height: 100% !important;
+        }
+
+        p {
+            padding: 2.8rem 1rem;
+            padding-top: 1rem;
+        }
+
     }
 }

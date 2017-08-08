@@ -51,6 +51,10 @@ a {
     text-decoration: none;
 }
 
+p {
+    margin: 0;
+}
+
 .clearfix:before, .clearfix:after {
     content: "";
     display: table;
@@ -59,10 +63,11 @@ a {
 .container {
     max-width: 126.7rem;
     margin: 0 auto;
-}
+    padding-left: 3.4rem;
 
-.clearfix:after {
-    clear: both;
+    @media only screen and (max-width: 1200px) {
+        padding-left: 0 !important;
+    }
 }
 
 .page-noscroll {

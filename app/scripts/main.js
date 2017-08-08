@@ -131,8 +131,6 @@ $(function() {
     //     return false;
     // });
 
-
-
     $window.resize(function() {
         var $windowWidth = $window.width();
         if ($windowWidth > 1200) {
@@ -149,22 +147,51 @@ $(function () {
     var _$windowWidth = $window.width();
     var areasSlider =  $('.areas-slider.bxslider');
 
-    if (_$windowWidth <= 768) {
-        areasSlider.bxSlider();
+    if (_$windowWidth <= 1268) {
+        areasSlider.bxSlider({
+            minSlides: 1,
+            maxSlides: 4,
+            slideWidth: 260,
+            slideMargin: 20
+
+        });
     }
 
     $window.resize(function() {
         var $windowWidth = $window.width();
-        if ($windowWidth > 769) {
+        if ($windowWidth > 1269) {
             try {
                 areasSlider.destroySlider();
             } catch(e) {
                 console.log(`You are recizing the window`)
             }
         } else {
-            areasSlider.bxSlider();
+            areasSlider.bxSlider({
+                minSlides: 1,
+                maxSlides: 4,
+                slideWidth: 260,
+                slideMargin: 20
+            });
         }
     });
+
+    // $window.resize(function() {
+    //     var $windowWidth = $window.width();
+    //     if ($windowWidth > 1269) {
+    //         try {
+    //             areasSlider.destroySlider();
+    //         } catch(e) {
+    //             console.log(`You are recizing the window`)
+    //         }
+    //     } else {
+    //         areasSlider.bxSlider({
+    //             minSlides: 1,
+    //             maxSlides: 4,
+    //             slideWidth: 380,
+    //             slideMargin: 10
+    //         });
+    //     }
+    // });
 });
 
 
