@@ -71,6 +71,11 @@ $(function() {
         $(this).addClass('show');
     });
 
+    $('.solutions-block li').on('click', function() {
+        $('.solutions-block li').removeClass('show');
+        $(this).addClass('show');
+    });
+
 
     // function behaviorSlide(el){
     //     var that = el,
