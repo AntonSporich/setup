@@ -282,6 +282,33 @@
     }
 }
 
+.customer-experience {
+    height: 72.3rem;
+    background-color: #4da2ee;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    background: linear-gradient(to bottom, #53a3f0, #39c4f4);
+    padding-right: 2rem;
+    padding-left: 2rem;
+
+    h2 {
+        font-size: 4.54rem;
+        color: #fff;
+        text-align: center;
+        padding-bottom: 6rem;
+    }
+
+    .customer-experience-content {
+        height: 44rem;
+        background: url(../resources/images/customer-experience-bg.png) no-repeat;
+        margin: 0 auto;
+
+        background-size: contain;
+        background-position-x: 47%;
+    }
+
+}
+
 @media only screen and (max-width: 500px) {
 
     .main-description {
@@ -421,7 +448,7 @@
 @media only screen and (max-width: 768px) {
 
     .enterprice-block {
-        background-position: -114rem;
+        background-position: -122rem;
         padding-right: 2rem;
 
         h2 {
@@ -468,5 +495,25 @@
                 color: #fff;
             }
         }
+    }
+}
+
+
+@media only screen
+and (max-width: 768px) {
+
+    .customer-experience {
+        height: 100%;
+
+        h2 {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+    }
+
+    .customer-experience-content {
+        background: url('../resources/images/customer-experience-mobile-bg.png') no-repeat !important;
+        background-size: contain !important;
+        background-position-x: 50% !important;
     }
 }
