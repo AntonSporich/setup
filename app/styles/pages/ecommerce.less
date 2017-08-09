@@ -309,6 +309,128 @@
 
 }
 
+.retail-support-block {
+
+    .retail-block {
+        border: 1px solid #d9e2fb;
+        padding: 4rem;
+        border-radius: 15px;
+        width: 103%;
+    }
+
+    .container {
+        padding-right: 3.4rem;
+    }
+
+    h2 {
+        font-size: 4.54rem;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 8rem;
+        padding-bottom: 9rem;
+    }
+
+    .heading-block {
+        background-color: #549dee;
+
+        h3 {
+            font-weight: 500;
+            font-size: 3.21rem;
+            text-align: center;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+    }
+
+    .retail-item {
+        background-color: #edf4f9;
+        padding-left: 4rem;
+        padding-top: 3rem;
+        min-height: 31.5rem;
+
+        h4 {
+            font-size: 2.46rem;
+            text-transform: uppercase;
+            padding-bottom: 3.3rem;
+            border-right: 1px solid #dbe3e8;
+            position: relative;
+
+
+            &:before {
+                content: '';
+                width: 6.5rem;
+                height: 6.3rem;
+                display: inline-block;
+                position: relative;
+                top: 1.5rem;
+                margin-right: 2.5rem;
+            }
+        }
+
+        ul {
+            padding-left: 9.2rem;
+            padding-bottom: 3.3rem;
+
+            li {
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 3rem;
+            }
+        }
+
+    }
+
+    .operations-column {
+
+        h4:before {
+            background: url(../resources/images/retail-icons.png) no-repeat;
+        }
+    }
+
+    .customer-column {
+
+        h4:before {
+            background: url(../resources/images/retail-icons.png) no-repeat;
+            background-position-x: -65px;
+        }
+    }
+
+    .analytics-column {
+
+        h4:before {
+            background: url(../resources/images/retail-icons.png) no-repeat;
+            background-position-x: -132px;
+        }
+    }
+
+    .arrow {
+        width: 2rem;
+        height: 4rem;
+        background: url(../resources/images/arrow.png) no-repeat;
+        margin-left: 13rem;
+    }
+
+    .retail-column {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: -5px;
+        width: 33.4%;
+
+        &:last-child h4 {
+            border: none;
+        }
+
+        &:nth-child(2) .arrow {
+            margin-left: 16rem;
+        }
+
+        &:nth-child(3) .arrow {
+            margin-left: 21rem;
+        }
+
+    }
+}
+
 @media only screen and (max-width: 500px) {
 
     .main-description {
@@ -406,6 +528,7 @@
             p {
                 padding-top: 0 !important;
                 padding-left: 2rem !important;
+                padding-right: 5rem;
                 padding-bottom: 2.9rem;
                 margin: 0 !important;
             }
@@ -498,7 +621,6 @@
     }
 }
 
-
 @media only screen
 and (max-width: 768px) {
 
@@ -516,4 +638,98 @@ and (max-width: 768px) {
         background-size: contain !important;
         background-position-x: 50% !important;
     }
+}
+
+@media only screen
+and (max-width: 1068px) {
+
+    .for-devices {
+        display: block;
+    }
+
+    .for-desktop {
+        display: none;
+    }
+
+    .retail-support-block {
+
+        .container {
+            padding: 0 !important;
+        }
+
+        h2 {
+            font-size: 3rem;
+            font-weight: 600 !important;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 500;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+
+    .retail-block {
+        border: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+
+        .item-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .retail-item {
+            padding: 0;
+            min-height: 10.5rem;
+            border-left: 1px solid #dbe3e8;
+            padding-right: 1rem;
+
+            h4 {
+                font-size: 1.4rem;
+                padding: 0;
+                padding-left: 1rem;
+                padding-top: 2rem;
+                font-weight: 500;
+                border: none;
+
+                &:before {
+                    width: 4.9rem;
+                    height: 4.6rem;
+                    background-size: cover;
+                    top: 0;
+                    left: 2rem;
+                    display: block;
+                }
+            }
+        }
+
+
+    }
+
+    .retail-support-block .customer-column h4:before {
+        background-position-x: -46px;
+    }
+
+    .retail-support-block .analytics-column h4:before {
+        background-position-x: -93px;
+    }
+
+    .retail-column:first-child {
+
+        .retail-item {
+            border: none;
+        }
+    }
+
+    .arrow {
+        margin: 0 auto !important;
+    }
+
+
 }
