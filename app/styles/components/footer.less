@@ -141,3 +141,100 @@
 #contact {
     border-top: 1px solid #ced7e1;
 }
+
+
+@media only screen and (max-width: 1200px) {
+    #contact {
+        padding: 30px 0;
+        background: #f0f4f9;
+    }
+    #contact section {
+        width: 300px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    #contact section ul {
+        margin-bottom: 30px;
+    }
+    #contact section ul li {
+        float: none;
+        margin-left: 0;
+        width: 300px;
+    }
+    #contact section ul li:before {
+        display: none;
+    }
+    #contact section ul li .phone-line {
+        display: block;
+    }
+    #contact section ul li a {
+        float: none;
+    }
+    #contact section>a {
+        height: 45px;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    #contact section ul li .ico-link, #contact section ul li .phone-line + .phone-line.ico-link {
+        position: relative;
+        display: block;
+        padding-left: 63px;
+        margin-bottom: 15px;
+    }
+    #contact section ul li .ico-link:before {
+        content: '';
+        display: inline-block;
+        height: 42px;
+        width: 42px;
+        border-radius: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #3ea800 url('../resources/images/sprite_global.svg') no-repeat;
+    }
+    #contact section ul li .mailto-line.ico-link:before {
+        background-position: -51px -48px;
+    }
+    #contact section ul li .phone-line.ico-link:before {
+        background-position: -48px -111px;
+    }
+
+    #services section ul li h2 {
+        padding-left: 0;
+    }
+    #services section ul li h2 > a, #services section ul li h2 > a.service-head-link {
+        display: table-cell;
+        vertical-align: middle;
+        padding-top: 0;
+        height: 80px;
+    }
+
+    .page_footer>div {
+        text-align: center;
+        padding-top: 25px;
+        height: 58px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    .page_footer>div nav {
+        display: none;
+    }
+    .page_footer>div p {
+        padding-bottom: 0;
+        display: inline-block;
+    }
+    .page_block {
+        padding-bottom: 58px;
+    }
+    .page_footer {
+        margin-top: -58px;
+    }
+    .page_footer {
+        margin-top: 0;
+    }
+}

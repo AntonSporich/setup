@@ -203,6 +203,8 @@ $(function () {
 
 $(function () {
    $('.showcase.bxslider').bxSlider({
-       pager: false
+       pager: false,
+       autoStart: true,
+       pause: 1000
    });
 });
