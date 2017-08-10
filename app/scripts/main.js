@@ -157,7 +157,8 @@ $(function () {
             minSlides: 1,
             maxSlides: 4,
             slideWidth: 260,
-            slideMargin: 20
+            slideMargin: 20,
+            controls: false
 
         });
     }
@@ -175,7 +176,8 @@ $(function () {
                 minSlides: 1,
                 maxSlides: 4,
                 slideWidth: 260,
-                slideMargin: 20
+                slideMargin: 20,
+                controls: false
             });
         }
     });
@@ -199,4 +201,8 @@ $(function () {
     // });
 });
 
-
+$(function () {
+   $('.showcase.bxslider').bxSlider({
+       pager: false
+   });
+});

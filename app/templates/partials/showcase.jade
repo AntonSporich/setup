@@ -1,0 +1,20 @@
+mixin showcaseSlider(mediaObj)
+    ul.showcase.bxslider
+        each item in mediaObj.items
+            li
+                .showcase-slide-item
+                    .slide-info
+                        h3
+                            != item.heading
+                        p.main
+                            != item.paragraph
+                        p.short.for-devices
+                            != item.shortDesc
+                        .study-case-link.for-devices
+                            a Case study
+
+                    .main-image
+                        img(src=item.src, alt='Loading image')
+                .read-more
+                    span
+                        a(href='#') Read more

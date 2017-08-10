@@ -125,6 +125,7 @@
         background-color: #fff;
         margin-right: 3rem;
         margin-bottom: 2.6rem;
+        box-shadow: 0 0 22px rgba(0, 0, 0, 0.48);
 
         &:nth-child(3n) {
             margin-right: 0;
@@ -244,6 +245,7 @@
             &:before {
                 content: '';
                 background: url("../resources/images/right-angle.png") no-repeat;
+                background-size: contain;
                 display: inline-block;
                 width: 1rem;
                 height: 1.4rem;
@@ -269,7 +271,7 @@
         &:after {
             content: '';
             background: url("../resources/images/right-angle.png") no-repeat;
-            background-size: cover;
+            background-size: contain;
             display: inline-block;
             width: 1rem;
             height: 1.6rem;
@@ -507,7 +509,101 @@
     }
 }
 
+.showcase-block {
+
+    h2 {
+        font-size: 4.55rem;
+        color: #000;
+        padding-top: 8rem;
+        padding-bottom: 5rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 2.56rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #000;
+        padding-bottom: 3rem;
+        padding-right: 3rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    p {
+        font-size: 1.52rem;
+        line-height: 2.55rem;
+        font-weight: 300;
+        //
+    }
+
+    img {
+        height: auto;
+        width: auto;
+    }
+
+    .showcase-slide-item {
+        //display: flex;
+    }
+
+    .slide-info {
+        padding-left: 11rem;
+        width: 46rem;
+        float: left;
+        margin-right: 3rem;
+    }
+
+    .read-more {
+        padding-left: 11rem;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+
+        & a {
+            font-weight: 500;
+            color: #000;
+
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    margin-left: 1rem;
+                    width: .9rem;
+                    height: 1.8rem;
+                    background: url(../resources/images/right-angle.png) no-repeat;
+                    background-size: cover;
+                    position: relative;
+                    top: .3rem;
+                }
+        }
+    }
+
+    .bx-wrapper {
+        box-shadow: none;
+        margin-bottom: 0!important;
+    }
+
+    .bx-next,
+    .bx-prev {
+        background: url(../resources/images/right-angle.png) no-repeat !important;
+        text-indent: 0 !important;
+        color: transparent;
+    }
+
+    .bx-prev {
+        position: relative;
+        transform: rotate(180deg);
+    }
+
+}
+
 @media only screen and (max-width: 500px) {
+
+    .greeting-section {
+
+        .container {
+            padding-right: 0;
+        }
+    }
 
     .main-description {
         width: 100% !important;
@@ -641,8 +737,13 @@
         }
 
         p {
-            padding: 2.8rem 1rem;
+            //padding: 2.8rem 1rem;
             padding-top: 1rem;
+        }
+
+        .bx-viewport {
+            height: 544px !important;
+            padding-top: 1.5rem;
         }
 
     }
@@ -900,4 +1001,69 @@ and (max-width: 1270px) {
            cursor: pointer;
        }
    }
+}
+
+@media only screen
+and (max-width: 1200px) {
+
+    .showcase-block {
+
+        .bx-controls,
+        .read-more,
+        p.main {
+            display: none;
+        }
+
+        .slide-info {
+            padding: 0;
+            width: 100%;
+            float: none;
+            background-color: #0290d0;
+            min-height: 14.4rem;
+
+            h3 {
+                padding: 0;
+                width: auto;
+                text-align: center;
+                font-size: 2rem;
+                color: #fff;
+                font-weight: 500;
+                max-height: 2rem;
+                margin-top: 1.9rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
+        }
+
+        img {
+            margin: 0 auto;
+        }
+
+        .showcase-slide-item {
+            //width: 31rem;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .study-case-link {
+            border: 1px solid white;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            text-transform: uppercase;
+            height: 38px;
+            line-height: 38px;
+            width: 218px;
+        }
+
+        p.short {
+            color: #fff;
+            font-weight: 400;
+            text-align: center;
+            padding: 1rem 2rem;
+        }
+
+    }
 }

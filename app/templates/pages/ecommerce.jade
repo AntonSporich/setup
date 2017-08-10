@@ -1,4 +1,5 @@
 extends default
+include ../partials/showcase
 
 block head
     - pageTitle = "Ecommerce"
@@ -194,4 +195,20 @@ block content
                         article
                             p IWD helps retail and wholesale businesses expand globally by enabling multi-language and multi-currency support, as well as different payment and delivery methods.
 
-
+    section.showcase-block
+        h2 Showcase
+        .container
+            +showcaseSlider({
+                items: [
+                    { heading: 'Shared Content and Online Document Research',
+                      paragraph: 'Our mobile applications for content sharing and online document research enable users to easily access, sync and share various content, store and manage files of multiple formats, and collaborate around that information right from mobile devices. Advanced features like screen sharing, collaborative editing and version control can enrich standard mobile functionality to make the mobile operations as comfortable as usual desktop experience.',
+                      src: 'resources/images/showcase-img-1.png',
+                      shortDesc: 'Description sample'
+                    },
+                    {heading: 'Lorem ipsum dolores sit amet',
+                     paragraph: 'Here homes the description paragraph',
+                     src: 'resources/images/showcase-img-1.png',
+                     shortDesc: 'Sec sample'
+                    }
+                ]
+            })
