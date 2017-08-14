@@ -39,6 +39,7 @@
     "gulp-watch": "4.3.9",
     "gulp-webserver": "0.9.1",
     "jquery": "^3.2.1",
+    "jquery.backstretch": "^2.1.15",
     "less": "2.7.1",
     "normalize.css": "^4.2.0",
     "path": "0.12.7",

@@ -13,11 +13,12 @@ mixin standart-head(pageTitle)
     block links
 
 
-    //build:css styles/main.css
-    link(rel="stylesheet" media="all" href="styles/main.css")
-    //endbuild
-
     //build:css styles/vendor.css
     link(rel="stylesheet" media="all" href="../../node_modules/normalize.css/normalize.css")
     link(rel="stylesheet" media="all" href="../../node_modules/bxslider/dist/jquery.bxslider.min.css")
     //endbuild
+
+    //build:css styles/main.css
+    link(rel="stylesheet" media="all" href="styles/main.css")
+    //endbuild
+
