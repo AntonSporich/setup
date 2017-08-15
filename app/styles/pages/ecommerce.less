@@ -1,6 +1,7 @@
 .greeting-section {
-    background: url('../resources/images/greeting-section-bg.png');
     height: 62rem;
+    background: url(../resources/images/greeting-section-bg.png) center center;
+    background-size: cover;
 
     .container {
         padding-left: 0;
@@ -18,7 +19,7 @@
     }
 
     h3 {
-        padding-bottom: 2.7rem;
+        padding-bottom: 1rem;
     }
 
 
@@ -219,8 +220,13 @@
     padding-bottom: 6rem;
     background-color: #e8ebf5;
     background-size: cover;
+    background-position-x: -13rem;
     //background-position-x: -37rem;
 
+
+    @media only screen and (max-width: 1300px) {
+        background-position-x: -29rem;
+    }
 
     h2 {
         font-size: 4.54rem;
@@ -291,7 +297,7 @@
     background-color: #4da2ee;
     padding-top: 8rem;
     padding-bottom: 5rem;
-    background: linear-gradient(to bottom, #53a3f0, #39c4f4);
+    background: linear-gradient(to bottom right, #5699ee 40%, #39c4f4 112%);
     padding-right: 2rem;
     padding-left: 2rem;
 
@@ -404,8 +410,8 @@
 
     .arrow {
         width: 2rem;
-        height: 4rem;
-        background: url(../resources/images/arrow.png) no-repeat;
+        height: 6rem;
+        background: url(../resources/images/arrow.png) no-repeat center;
         margin-left: 13rem;
     }
 
@@ -506,6 +512,10 @@
     p {
         font-size: 1.45rem;
         line-height: 2.55rem;
+    }
+
+    li.show {
+        background-color: #e0ecfd;
     }
 }
 
@@ -754,7 +764,7 @@
 @media only screen and (max-width: 768px) {
 
     .enterprice-block {
-        background-position: -122rem;
+        background-position: -111rem;
         padding-right: 2rem;
 
         .container {
