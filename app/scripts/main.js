@@ -149,9 +149,12 @@ $(function() {
 
 //Slider logic appearence
 $(function () {
+
     var _$windowWidth = $window.width();
     var areasSlider =  $('.areas-slider.bxslider');
+    var showcase = $('.showcase.bxslider');
 
+//Only device slider
     if (_$windowWidth <= 1268) {
         areasSlider.bxSlider({
             minSlides: 1,
@@ -163,7 +166,37 @@ $(function () {
         });
     }
 
+//Device & desktop slider
+    function showcaseSlider() {
+        try {
+            showcase.destroySlider();
+        } catch (e) {}
+        var $width  = $(window).width();
+
+        if ($width >= 1201) {
+            showcase.bxSlider({
+                pager: false,
+                autoStart: true,
+                pause: 1000
+            });
+        } else {
+            showcase.bxSlider({
+                pager: false,
+                autoStart: true,
+                pause: 1000,
+                maxSlides: 5,
+                moveSlides: 1,
+                slideWidth: 300,
+                slideMargin: 20
+            });
+        }
+    }
+
+    showcaseSlider();
+
     $window.resize(function() {
+        showcaseSlider();
+
         var $windowWidth = $window.width();
         if ($windowWidth > 1269) {
             try {
@@ -181,30 +214,9 @@ $(function () {
             });
         }
     });
-
-    // $window.resize(function() {
-    //     var $windowWidth = $window.width();
-    //     if ($windowWidth > 1269) {
-    //         try {
-    //             areasSlider.destroySlider();
-    //         } catch(e) {
-    //             console.log(`You are recizing the window`)
-    //         }
-    //     } else {
-    //         areasSlider.bxSlider({
-    //             minSlides: 1,
-    //             maxSlides: 4,
-    //             slideWidth: 380,
-    //             slideMargin: 10
-    //         });
-    //     }
-    // });
 });
 
 $(function () {
-   $('.showcase.bxslider').bxSlider({
-       pager: false,
-       autoStart: true,
-       pause: 1000
-   });
+
 });
+
